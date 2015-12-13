@@ -86,8 +86,8 @@
 }
 
 .pl-mi /* markup.italic */ {
-  color: #333;
-  font-style: italic;
+	color: #333;
+	font-style: italic;
 }
 
 .pl-mb /* markup.bold */ {
@@ -113,4 +113,3 @@
 .pl-mo /* meta.output */ {
   color: #1d3e81;
 }
-

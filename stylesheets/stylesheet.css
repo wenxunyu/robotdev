@@ -296,7 +296,10 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
 }
 
 #project_title {
@@ -361,7 +364,7 @@ Full-Width Styles
 }
 
 #main_content {
-  padding-top: 40px;
+	padding-top: 10px;
 }
 
 #footer_wrap {
@@ -422,4 +425,20 @@ Small Device Styles
     font-size: 11px;
   }
 
+}
+#header_wrap .dh {
+	font-size: 36px;
+	color: #FFF;
+	height: 60px;
+	width: 630px;
+	text-decoration: inherit;
+	text-align: right;
+	font-style: italic;
+}
+.i-i {
+	width: 70px;
+	background-position: center center;
+	text-align: center;
+	margin-left: 10px;
+	color: #FFF;
 }
