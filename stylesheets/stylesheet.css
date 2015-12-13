@@ -430,15 +430,14 @@ Small Device Styles
 	font-size: 36px;
 	color: #FFF;
 	height: 60px;
-	width: 630px;
-	text-decoration: inherit;
-	text-align: left;
-	font-style: italic;
+	width: 620px;
+	text-align: justify;
 }
 .i-i {
 	width: 70px;
 	background-position: center center;
 	text-align: center;
-	margin-left: 10px;
 	color: #FFF;
+	margin-right: 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
