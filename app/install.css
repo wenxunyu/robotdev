@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{ margin:0; padding:0; width: 100%; height: 100%;}
+html{ position: relative;}
+.install-bgphone{ width: 10rem; height: 100%; margin: 0 auto; background:url(../images/intsall_phonebg.png) no-repeat 1.45rem 2.5rem; background-size:8rem 14.4rem;}
+.install-bgbot{ width: 10rem; height: 100%; background:url(../images/install_botbg.png) no-repeat bottom center; background-size:contain;}
+.install-bgtop{ width: 10rem; height: 100%; background:url(../images/install_topbg.png) no-repeat top center; background-size: contain;}
+.install-container{ width:6.1rem; margin: 0 auto;}
+.install-container a{ display: block; text-decoration: none;}
+.install-tit{ text-align: center; color: #52cab1; font-size: 0.58666667rem; padding: 1.7rem 0 2.0rem 0;}
+.install-logo{ width: 1.1rem; margin:0 auto;}
+.install-logo img{ display: block; width: 100%;}
+.install-btn{ display: block; width:3.2rem; height:0.8rem; line-height: 0.8rem; color: #fff; background: #37d4c3; border-radius: 0.4rem; text-align: center; font-size:0.37333333rem; text-decoration: none; margin: 0.4rem auto; box-shadow: 0 0 0.15rem #37d4c3;}
+.install-tip{ font-size:0.32rem; color: #626262;}
+.install-tipdes{ font-size:0.32rem; color: #4ed8c9;}
+.instatit{ font-size:0.32rem; color: #626262;}
+.instatitsec{ font-size:0.28rem; color: #bfbfbf;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

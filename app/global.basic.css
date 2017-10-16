@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+html {
+	font-size: 75px;
+}
+@media only screen and (max-width: 319px) {
+    html {
+        font-size: 32px;
+    }
+}
+@media only screen and (min-width: 320px) {
+    html {
+       font-size: 32px;
+    }
+}
+@media only screen and (min-width: 360px) {
+    html {
+        font-size: 36px;
+    }
+}
+@media only screen and (min-width: 375px) {
+    html {
+       font-size: 37.5px;
+    }
+}
+@media only screen and (min-width: 384px) {
+    html {
+       font-size: 38.4px;
+    }
+}
+@media only screen and (min-width: 400px) {
+    html {
+        font-size: 40px;
+    }
+}
+@media only screen and (min-width: 414px) {
+    html {
+       font-size: 41.4px;
+    }
+}
+@media only screen and (min-width: 424px) {
+    html {
+       font-size: 42.4px;
+    }
+}
+@media only screen and (min-width: 480px) {
+    html {
+       font-size: 48px;
+    }
+}
+@media only screen and (min-width: 540px) {
+    html {
+        font-size: 54px;
+    }
+}
+@media only screen and (min-width: 720px) {
+    html {
+        font-size: 72px;
+    }
+}
+@media only screen and (min-width: 750px) {
+    html {
+        font-size: 75px;
+    }
+}
+
+body,ul,li,p,input,textarea,dl,dt,dd,h1{ margin:0; padding:0; list-style: none; font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;}
+html,body{ height: 100%;} 
+.w-flex{ display: flex;}
+.w-flex1{ flex:1;}
+.m-flexlay{ display: flex; justify-content: center; align-items: center;}
+.m-flex1{ flex:1;}
+.top-align{    align-items: initial;}
+.textcenter{ text-align: center; text-indent: 0!important;}
+.radiusbtn{ display:block; height:0.93333333rem; line-height: 0.93333333rem; background: #37d4c2; color: #fff; font-size: 0.37333333rem; border-radius: 0.46666667rem; border: none;}
+.mui-content{ background-color: #dcdcdc; padding:0!important;}
+.midcon{ padding: 0.21333333rem 0.26666667rem;}
+.titbluebg{ background: #37d4c2; border-radius:0.13333333rem; color: #fff; font-size: 0.34666667rem; text-indent: 0.64rem; height: 1.06666667rem; line-height: 1.06666667rem;}
+.conwhibg{ background: #fff; border-radius:0.13333333rem;}
+.whitebg{ background: #fff;}
+.lightblubg{ background: #eaf8f8;}
+/*background-color*/
+.sp-body{ height: 100%; background: #dcdcdc;}
+.mar-bot4{ margin-bottom: 0.05333333rem;}
+/*顶部标题选项卡*/
+.have-sp-tab>.mui-scroll-wrapper{ top: 1.21rem;}
+.sp-tab-twowrap{ background: #0db69f; padding-bottom: 0.10666667rem; }
+.sp-tab-twoinner{ margin: 0 0.26666667rem; border-radius: 0.13333333rem; overflow: hidden; display: flex; }
+.sp-tab-twobtn{ flex: 1; text-align: center; line-height: 1.06666667rem; background: #fff;}
+.sp-tab-twobtn.active{ background: #dbf5f4;}
+.sp-tab-twobtn a{ font-size: 0.37333333rem; text-decoration: none; color: #616161;}
+.sp-tab-twobtn.active a{ color: #38d0c3;}
+.f-clear:after{ content: ''; display: block; clear: both;}
+.f-fl{ float: left;}
+.f-fr{ float: right;}
+/*top定位*/
+.topposition{ top:1.16rem;}
+
+
+
+
