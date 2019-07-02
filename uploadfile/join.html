@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <title>申请新集团</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="applicable-device" content="pc,mobile">
+  <script>(function(w){var r=document.documentElement,t,f=function(){var c=r.clientWidth;r.style.fontSize=(c>w?w:c<320?320:c)/w*100+"px"},s=function(){clearTimeout(t);t=setTimeout(f,100)};window.addEventListener("resize",s);f()})(750)</script>
+  <script type="text/javascript" src="${webStaticUrl}common/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="${webStaticUrl}public/layui/layui.js"></script>
+  <script type="text/javascript" src="${webStaticUrl}public/jquery-editable/jquery-editable-select.js"></script>
+  <script type="text/javascript" src="${webStaticUrl}public/js/baseURL.js"></script>
+  <script type="text/javascript" src="${webStaticUrl}common/jquery.cookie.js"></script>
+<!--  <script type="text/javascript" src="${webStaticUrl}/join/js/join.js"></script>-->
+  <script type="text/javascript" src="../join/js/join.js"></script>
+  <link rel="stylesheet" href="${webStaticUrl}public/css/global.css">
+  <link rel="stylesheet" href="${webStaticUrl}public/xwui/xwui.css">
+  <link rel="stylesheet" href="${webStaticUrl}public/layui/css/layui.css">
+  <link rel="stylesheet" href="${webStaticUrl}public/jquery-editable/jquery-editable-select.css">
+  <link rel="stylesheet" href="${webStaticUrl}join/css/join.css">
+
+</head>
+<body>
+<!-- page -->
+<div class="page page-join" id="page">
+  <div class="page__main">
+    <div class="content"><form>
+      <!-- 法人身份证 -->
+      <h3 class="section-title">法人身份证（必填）</h3>
+      <div class="row-upload">
+        <div class="row-upload__col">
+          <label>
+            <img src="${webStaticUrl}join/imgs/join-upload1.png">
+            <input type="file" accept="images/*" id="pic1" name="img_frsfz1" onchange="javascript:uploadImgPreview(this, this.previousElementSibling)">
+          </label>
+          <p>上传身份证正面照</p>
+        </div>
+        <div class="row-upload__col">
+          <label>
+            <img src="${webStaticUrl}join/imgs/join-upload2.png">
+            <input type="file" accept="images/*" id="pic2" name="img_frsfz2" onchange="javascript:uploadImgPreview(this, this.previousElementSibling)">
+          </label>
+          <p>上传身份证背面照</p>
+        </div>
+      </div>
+      <!-- //法人身份证 -->
+      <!-- 经办人身份证 -->
+      <h3 class="section-title">经办人身份证 <span onclick="javascript:idcardImgSync()" style="cursor:pointer">同步法人身份证</span></h3>
+      <div class="row-upload">
+        <div class="row-upload__col">
+          <label>
+            <img src="${webStaticUrl}join/imgs/join-upload1.png">
+            <input type="file" accept="images/*" id="pic3" name="img_jbrsfz1" onchange="javascript:uploadImgPreview(this, this.previousElementSibling)">
+          </label>
+          <p>上传身份证正面照</p>
+        </div>
+        <div class="row-upload__col">
+          <label>
+            <img src="${webStaticUrl}join/imgs/join-upload2.png">
+            <input type="file" accept="images/*" id="pic4" name="img_jbrsfz2" onchange="javascript:uploadImgPreview(this, this.previousElementSibling)">
+          </label>
+          <p>上传身份证背面照</p>
+        </div>
+      </div>
+      <!-- //经办人身份证 -->
+      <!-- 营业执照 -->
+      <h3 class="section-title">营业执照（必填）</h3>
+      <div class="row-upload">
+        <div class="row-upload__col">
+          <label>
+            <img src="${webStaticUrl}join/imgs/join-upload3.png">
+            <input type="file" accept="images/*" id="pic5" name="img_yyzz" onchange="javascript:uploadImgPreview(this, this.previousElementSibling)">
+          </label>
+          <p>上传营业执照</p>
+        </div>
+      </div>
+      <!-- //营业执照 -->
+      <!-- 联系人 -->
+      <h3 class="section-title">联系人（必填）</h3>
+      <div class="row-inp">
+        <input type="text" class="inp" id="lxr" name="liaison_name">
+      </div>
+      <!-- //联系人 -->
+      <!-- 联系电话 -->
+      <h3 class="section-title">联系电话（必填）</h3>
+      <div class="row-inp">
+        <input type="tel" maxlength="11" class="inp" id="lxdh" name="phone">
+      </div>
+      <!-- //联系电话 -->
+      <!-- 备注 -->
+      <h3 class="section-title">备注</h3>
+      <div class="row-inp">
+        <textarea class="textarea" id="bz" name="memo"></textarea>
+      </div>
+      <!-- //备注 -->
+      <button type="button" class="xwui-button is-primary is-block" onclick="addNewGroup()">申请新集团</button>
+    </form></div>
+  </div>
+</div>
+<!-- //page -->
+<div class="popup popup-normal" id="popup-thisPopupName">
+  <div class="popup-normal__title" >
+    申请提示
+  </div>
+  <div class="popup-normal__content">
+    <p style="text-align:center;" id="pop-center"></p>
+    <!-- <p>最下面是按钮，按钮数量 1 ~ 3 个，注意控制按钮文字数</p>&ndash;&gt;-->
+  </div>
+  <div class="popup-normal__btn">
+    <!-- 按钮数量 1 ~ 3 个 -->
+    <a href="" class="btn xwui-button is-small is-block is-primary" onclick="define()">确定</a>
+    <!--<a href="javascript:;" class="btn xwui-button is-small is-block is-default" onclick="javascript:Popup.hide()">关闭</a>
+  --> <!-- <a href="" class="btn xwui-button is-small is-block is-disabled">禁用</a>-->
+  </div>
+</div>
+<script src="${webStaticUrl}public/js/popup.js"></script>
+<script>
+function uploadImgPreview (thisElem, targetImg) {
+  var file = thisElem.files[0];
+  if (file) {
+    targetImg.src = URL.createObjectURL(file);
+    targetImg.onload = function () {
+      URL.revokeObjectURL(targetImg.src);
+    }
+  }
+}
+
+function idcardImgSync () {
+  var form = document.querySelector('form');
+  var fr_1 = form['img_frsfz1'];
+  var fr_2 = form['img_frsfz2'];
+  var jbr_1 = form['img_jbrsfz1'];
+  var jbr_2 = form['img_jbrsfz2'];
+  if (fr_1.files.length == 0 || fr_2.files.length == 0) {
+    alert('法人身份证正反面照片不能为空');
+    return;
+  }
+  jbr_1.files = fr_1.files;
+  jbr_2.files = fr_2.files;
+  uploadImgPreview(jbr_1, jbr_1.previousElementSibling)
+  uploadImgPreview(jbr_2, jbr_2.previousElementSibling)
+}
+
+form = document.querySelector('form');
+</script>
+
+</body>
+</html>
