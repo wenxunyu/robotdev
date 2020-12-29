@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+</body>
+</html>
+<script>
+    var url = 'http://dsp.spay365.com/api/n/adv/media/request?appId=tuFgpQFvk&locationId=tMRRbAVVL&deviceType=1&platform=0&osVersion=8.0.0&androidId=a8dea55233e975f9&density=3&carrier=1&networkType=4&ip=115.236.35.106&advWidth=640&advHeight=960&deviceWidth=411&deviceHeight=731&manufacturer=EVA-AL10&model=EVA-AL10&appName=name&pkgName=com.pkg';
+    window.games.appGetAdvert(url);
+    function detailAdvData(data){
+        document.querySelector('#div').innerHTML = data;
+    }
+</script>
